@@ -17,12 +17,12 @@ review_version: 4.0
 # inherit: ["A.yml", "B.yml"]
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
-bookname: ReVIEW-Template
+bookname: PantiePatchWithUnityCSharp
 # 記述言語。省略した場合はja
 language: ja
 
 # 書名
-booktitle: {name: "Re:VIEWテンプレート", file-as: "reviewテンプレート"}
+booktitle: {name: "キッシュちゃんパンツパッチAPIで学ぶC#、UnityEditor拡張入門", file-as: "reviewテンプレート"}
 
 # 著者名。「, 」で区切って複数指定できる
 aut: [{name: "TechBooster編", file-as: "techboosterヘン"}]
