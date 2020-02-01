@@ -69,15 +69,18 @@ UnityEditorのunitypackageをインポートしてください。
 
 そしてメニューの Editor -> PantiePatch -> データダウンロード を選択してください。
 
-[画像]
+//image[PantiePatcheEditorMenu][メニューのデータダウンロードを選択]{
+//}
 
 次のようなウインドウが出るので、変換元テクスチャダウンロードの項目の
 「ダウンロード」ボタンを押します。
 
-[画像]
+//image[DownloadWindow][ダウンロードボタン]{
+//}
 
 すると、画像のダウンロードが開始されます。ダウンロードが完了すると、Assetsフォルダ内に次のように
 AliceLaboratoryフォルダ、Dreamsフォルダが作成され、Dreamsフォルダの中に、名前に番号のふられた
 画像が作成されていれば準備完了です！
 
-[画像]
+//image[DownloadedFiles][ダウンロード後のProjectウインドウ]{
+//}
