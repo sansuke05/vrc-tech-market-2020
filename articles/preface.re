@@ -44,11 +44,17 @@
 
 === 準備するもの
  * Unity
+ * テキストエディタ
  * キッシュちゃんパンツパッチUnityEditor
  * CC0ぱんつモデル
 
 Unityは著者の環境では Unity 2017.4.28f1を使用しています。本書では
 著者と同じ環境のUnityがインストールされていることを前提として進めていきます。
+
+テキストエディタは好きなものを使ってもらって大丈夫ですが、流石にメモ帳などでは書くのが辛いと思います。
+著者のお勧めとしては Visual Studio Code が使いやすいのでお勧めです。
+
+@<href>{https://azure.microsoft.com/ja-jp/products/visual-studio-code/}
 
 キッシュちゃんパンツパッチUnityEditorはこちらからunitypackageを
 ダウンロードできます。
@@ -59,6 +65,24 @@ Unityは著者の環境では Unity 2017.4.28f1を使用しています。本書
 CC0ぱんつモデルはてんてーさんによってこちらで配布されています。
 
 @<href>{https://github.com/TenteEEEE/quiche_pantie_patch/wiki/CC0%E3%81%B1%E3%82%93%E3%81%A4}
+
+=== Unityへのエディタの設定
+
+メニューの「Edit」にある「Preference」を選択します。（Macの場合は「Unity」-> 「Preference」です。）
+
+「External Tools」タブを選択し、エディタを選択します。（デフォルトでは Visual Studio か MonoDevelop が選べるようになってたかも...？）
+
+使いたいエディタがタブにない場合は「Browse」ボタンから使いたいエディタの実行ファイル（.exeファイルなど）がある場所を探して実行ファイルを指定します。
+
+Visual Studio Code をエディタとして指定した場合、次のような状態になっていればOKです。
+
+//image[Editor][VSCodeを選んた場合のウインドウ]{
+//}
+
+最後に、メニューの「Assets」から「Open C# Project」を選択して、エディタが開くのを確認しましょう。
+
+//image[OpenCSharpMenu][Open C# Projectを選択]{
+//}
 
 === ぱんつ変換元画像のダウンロード
 
