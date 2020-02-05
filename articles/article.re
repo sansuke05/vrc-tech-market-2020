@@ -3,7 +3,7 @@
 
 この章では、UnityのScene上にキッシュちゃん素体用のぱんつを表示するスクリプトを書いてみます。
 
-このスクリプトを通して、変数や型、画像の読み込み、Unity のコンポネントの使い方などについて学んでいきましょう。
+このスクリプトを通して、変数や型、クラス、オブジェクト、Unity のコンポネントの使い方などについて学んでいきましょう。
 
 == Unityでスクリプトを準備する
 
@@ -244,8 +244,10 @@ Texture2D tex = new Texture2D(0, 0);
 
 このように、クラスも型として指定することができます。
 
-ここでは、Texture2Dの変数を作り、@<kw>{new}というキーワードを使って
-Texture2Dを使うよという宣言をしています。
+そして@<kw>{クラスを型として定義された変数}を、@<kw>{オブジェクト}と言います。
+
+ここでは、@<kw>{new}というキーワードを使ってTexture2Dクラスを使ってtexというオブジェクト
+を作るよ！という宣言をしています。
 
 （）の中の２つの0は最初は空の何もないテクスチャを用意するよというのを表しています。
 
@@ -300,3 +302,79 @@ QuodのInspectorへ今まで作ってきたスクリプトをドラッグ&ドロ
 
 そうしたら、スクリプトの方へ戻りましょう。
 
+ここから最後の工程。読み込んだテクスチャをAttachしたQuadに貼り付けます。
+
+テクスチャをスクリプトで貼り付けるためには、まずQuadのRendererというコンポネントを呼び出す必要があります。
+
+今AttachされているQuad（GameObject）のコンポネントを呼び出すためには、@<kw>{GetComponent}というものを使って
+次のように書きます。
+
+//list[get_renderer][Rendererコンポネントの呼び出し][c#]{
+Renderer r = GetComponent<Renderer>();
+//}
+
+ん、型の部分にはRendererが指定されていますね。
+
+実はUnityのスクリプトではコンポネントもクラスとして扱われます。
+
+よく見るTransformや、コライダーなんかも、実はクラスや
+オブジェクトだったわけです！（な、なんだってー！）
+
+そう考えると、Rendererからテクスチャを呼び出す次の処理も理解できると思います。
+
+//list[get_texture][Rendererからテクスチャを呼び出す処理]{
+r.material.mainTexture
+//}
+
+Texture2Dのところでも出てきましたが、@<kw>{オブジェクト.関数}や@<kw>{オブジェクト.変数}で、
+オブジェクトに含まれる関数や変数を呼び出すことができます。
+
+（Fileの場合は クラス.関数 でしたが、中にはこのようにクラスをオブジェクト化しなくても
+呼び出せるものもあります）
+
+今回はRendererのオブジェクトにすでに定義されている、Materialのオブジェクトを呼び出し、
+さらにそのMaterialのオブジェクトに定義されているTextureのオブジェクト「mainTexture」
+を呼び出しています。
+
+そして、これに読み込んだテクスチャを代入します。
+
+//list[set_texture][読み込んだテクスチャ画像を代入]{
+r.material.mainTexture = tex;
+//}
+
+これでぱんつ表示スクリプトの完成です！
+
+全体のスクリプトは次のような感じです。
+
+//list[show_pantie_script_all][ぱんつ表示スクリプトの全体]{
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO;
+
+public class NewBehaviourScript : MonoBehaviour 
+{
+	void Start () 
+    　　{
+        　　string dreamDir = "Assets/AliceLaboratory/Dreams/";
+
+        　　Texture2D tex = new Texture2D(0, 0);
+        　　tex.LoadImage(File.ReadAllBytes(dreamDir + "0001.png"));
+        　　
+        　　Renderer r = GetComponent<Renderer>();
+        　　r.material.mainTexture = tex;
+	}
+	
+	void Update () 
+    　　{
+		
+	}
+}
+//}
+
+さてそれではUnityに戻って再生ボタンを押してみましょう！
+
+次のように、Quadに画像が表示されれば完成です！お疲れ様でした！
+
+//image[Pantie][ぱんつ召喚！]{
+//}
