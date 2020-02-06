@@ -38,7 +38,7 @@ aut: [{name: "サンスケ(sansuke05)", file-as: "sansuke05"}]
 # a-art, art: グラフィックデザインおよび芸術家
 # a-asn, asn: 関連・かつての所有者・関係者
 # a-aqt, aqt: 大きく引用された人物
-aqt: "てんてー/TenteEEEE"
+#aqt: "てんてー/TenteEEEE"
 # a-aft, aft: 後書き・奥付の責任者
 # a-aui, aui: 序論・序文・前書きの責任者
 # a-ant, ant: 目録責任者
