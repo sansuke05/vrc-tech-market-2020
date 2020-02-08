@@ -68,7 +68,7 @@ Debug.Log("Hello World");
 
 //}
 
-Unityに戻って、Hierarchy ウインドウに適当なオブジェクト（CreateEmptyなど）を作成し、
+Unityに戻って、Hierarchy ウインドウに適当なゲームオブジェクト（CreateEmptyなど）を作成し、
 Inspector ウインドウの Add Component から上の文を追記したScriptファイルを追加しましょう。
 
 そして、上の方にある "▶︎" の再生ボタンを押します。

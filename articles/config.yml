@@ -22,7 +22,7 @@ bookname: PantieWithUnityCSharp
 language: ja
 
 # 書名
-booktitle: {name: "ぱんつで学ぶC#、UnityEditor拡張入門(UnityC#編)", file-as: "reviewテンプレート"}
+booktitle: {name: "ぱんつで学ぶ UnityC#、Editor拡張入門（UnityC#編）", file-as: "ぱんつで学ぶ UnityC#、Editor拡張入門"}
 
 # 著者名。「, 」で区切って複数指定できる
 aut: [{name: "サンスケ(sansuke05)", file-as: "sansuke05"}]
@@ -125,7 +125,7 @@ toc: true
 # cover: null
 #
 # 表紙に配置し、書籍の影絵にも利用する画像ファイル。省略した場合はnull (画像を使わない)。画像ディレクトリ内に置いてもディレクトリ名は不要(例: cover.jpg)
-# coverimage: cover.png
+coverimage: Cover.png
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はnull (作成しない)
 titlepage: true
