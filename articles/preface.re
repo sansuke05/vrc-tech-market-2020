@@ -62,7 +62,7 @@ Unityは著者の環境では Unity 2017.4.28f1を使用しています。本書
 @<href>{https://sansuke05.booth.pm/items/1582611}
 //label[pantie-patche-editor]
 
-CC0ぱんつモデルはてんてーさんによってこちらで配布されています。
+CC0ぱんつモデルはてんてー（@<href>{https://twitter.com/tenteeeee_vrc, @tenteeeee_vrc}）さんによってこちらで配布されています。
 
 @<href>{https://github.com/TenteEEEE/quiche_pantie_patch/wiki/CC0%E3%81%B1%E3%82%93%E3%81%A4}
 
