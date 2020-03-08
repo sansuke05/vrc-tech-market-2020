@@ -79,7 +79,7 @@ PrintString()という関数を作ってStart()からPrintString()関数を呼�
 このStart()関数は名前のとおり、Sceneが始まる際にUnityから内部的に呼ばれる関数になります。
 
 //list[funcDefinition][書き方の定義][c#]{
-戻り値 関数名(引数){
+戻り値 関数名(引数の型 引数){
     処理
 }
 //}
